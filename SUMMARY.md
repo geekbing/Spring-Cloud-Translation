@@ -7,3 +7,4 @@
 	* [Spring Cloud 上下文](Cloud Native Applications/Spring Cloud Context/Spring Cloud Context.md)
 		* [应用程序引导上下文](Cloud Native Applications/Spring Cloud Context/The Bootstrap Application Context.md)
 		* [应用上下文层次结构](Cloud Native Applications/Spring Cloud Context/Application Context Hierarchies.md)
+		* [更改引导属性的位置](Cloud Native Applications/Spring Cloud Context/Changing the Location of Bootstrap Properties.md)
