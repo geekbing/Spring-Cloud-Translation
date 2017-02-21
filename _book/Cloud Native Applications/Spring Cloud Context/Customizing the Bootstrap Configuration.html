@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Spring Cloud 上下文 · GitBook</title>
+        <title>自定义引导配置 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="The Bootstrap Application Context.html" />
+    <link rel="next" href="Customizing the Bootstrap Property Sources.html" />
     
     
-    <link rel="prev" href="../Cloud Native Applications.html" />
+    <link rel="prev" href="Overriding the Values of Remote Properties.html" />
     
 
     </head>
@@ -142,7 +142,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="Spring Cloud Context.html">
+        <li class="chapter " data-level="1.4.1" data-path="Spring Cloud Context.html">
             
                 <a href="Spring Cloud Context.html">
             
@@ -208,7 +208,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.1.5" data-path="Customizing the Bootstrap Configuration.html">
+        <li class="chapter active" data-level="1.4.1.5" data-path="Customizing the Bootstrap Configuration.html">
             
                 <a href="Customizing the Bootstrap Configuration.html">
             
@@ -326,7 +326,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Spring Cloud 上下文</a>
+        <a href="../.." >自定义引导配置</a>
     </h1>
 </div>
 
@@ -341,11 +341,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="spring-cloud-context-&#x5E94;&#x7528;&#x4E0A;&#x4E0B;&#x6587;&#x670D;&#x52A1;">Spring Cloud Context: &#x5E94;&#x7528;&#x4E0A;&#x4E0B;&#x6587;&#x670D;&#x52A1;</h1>
-<p>&#x5173;&#x4E8E;&#x5982;&#x4F55;&#x4F7F;&#x7528;Spring&#x6765;&#x6784;&#x5EFA;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;Spring Boot&#x6709;&#x81EA;&#x5DF1;&#x56FA;&#x6709;&#x7684;&#x89C2;&#x70B9;&#xFF0C;&#x4F8B;&#x5982;&#x5B83;&#x5177;&#x6709;&#x7528;&#x4E8E;&#x516C;&#x5171;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x5E38;&#x89C4;&#x4F4D;&#x7F6E;&#xFF0C;&#x4EE5;&#x53CA;&#x7528;&#x4E8E;&#x5E38;&#x89C1;&#x7BA1;&#x7406;&#x548C;&#x76D1;&#x63A7;&#x4EFB;&#x52A1;&#x7684;&#x7AEF;&#x70B9;&#x3002; Spring Cloud&#x6784;&#x5EFA;&#x5728;Spring Boot&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#xFF0C;&#x5E76;&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E9B;&#x529F;&#x80FD;&#xFF0C;&#x8FD9;&#x4E9B;&#x529F;&#x80FD;&#x53EF;&#x80FD;&#x662F;&#x7CFB;&#x7EDF;&#x4E2D;&#x6240;&#x6709;&#x7EC4;&#x4EF6;&#x4F1A;&#x4F7F;&#x7528;&#x6216;&#x5076;&#x5C14;&#x9700;&#x8981;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+                                <h1 id="&#x81EA;&#x5B9A;&#x4E49;&#x5F15;&#x5BFC;&#x914D;&#x7F6E;">&#x81EA;&#x5B9A;&#x4E49;&#x5F15;&#x5BFC;&#x914D;&#x7F6E;</h1>
+<h1 id="todo">TODO</h1>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;&#x5173;&#x952E; <code>org.springframework.cloud.bootstrap.BootstrapConfiguration</code> &#x4E0B;&#x5411; <code>/META-INF/spring.factories</code> &#x4E2D;&#x6DFB;&#x52A0;&#x6761;&#x76EE;&#x6765;&#x8BAD;&#x7EC3;&#x5F15;&#x5BFC;&#x4E0A;&#x4E0B;&#x6587;&#x4EE5;&#x6267;&#x884C;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x4EE5;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;Spring @Configuration&#x7C7B;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x5C06;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x4E0A;&#x4E0B;&#x6587;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x6B64;&#x5904;&#x521B;&#x5EFA;&#x60A8;&#x5E0C;&#x671B;&#x53EF;&#x7528;&#x4E8E;&#x4E3B;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E0A;&#x4E0B;&#x6587;&#x4EE5;&#x8FDB;&#x884C;&#x81EA;&#x52A8;&#x88C5;&#x914D;&#x7684;&#x4EFB;&#x4F55;bean&#xFF0C;&#x5E76;&#x4E14;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x4E3A;ApplicationContextInitializer&#x7684;@Beans&#x7684;&#x7279;&#x6B8A;&#x5408;&#x540C;&#x3002;&#x5982;&#x679C;&#x8981;&#x63A7;&#x5236;&#x542F;&#x52A8;&#x987A;&#x5E8F;&#xFF08;&#x9ED8;&#x8BA4;&#x987A;&#x5E8F;&#x4E3A;&#x201C;last&#x201D;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;@Order&#x6807;&#x8BB0;&#x7C7B;&#x3002;</p>
+<p>&#x8B66;&#x544A;
+&#x5728;&#x6DFB;&#x52A0;&#x81EA;&#x5B9A;&#x4E49;BootstrapConfiguration&#x65F6;&#xFF0C;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x60A8;&#x6DFB;&#x52A0;&#x7684;&#x7C7B;&#x4E0D;&#x662F;@ComponentScanned&#x9519;&#x8BEF;&#x5730;&#x63D2;&#x5165;&#x5230;&#x60A8;&#x7684;&#x201C;&#x4E3B;&#x201D;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#xFF0C;&#x53EF;&#x80FD;&#x4E0D;&#x9700;&#x8981;&#x5B83;&#x4EEC;&#x3002;&#x5BF9;&#x4E8E;&#x5C1A;&#x672A;&#x7531;@ComponentScan&#x6216;@SpringBootApplication&#x6CE8;&#x91CA;&#x914D;&#x7F6E;&#x7C7B;&#x6DB5;&#x76D6;&#x7684;&#x5F15;&#x5BFC;&#x914D;&#x7F6E;&#x7C7B;&#x4F7F;&#x7528;&#x5355;&#x72EC;&#x7684;&#x5305;&#x540D;&#x79F0;&#x3002;
+&#x5F15;&#x5BFC;&#x8FDB;&#x7A0B;&#x901A;&#x8FC7;&#x5C06;&#x521D;&#x59CB;&#x5316;&#x7A0B;&#x5E8F;&#x6CE8;&#x5165;&#x5230;&#x4E3B;SpringApplication&#x5B9E;&#x4F8B;&#xFF08;&#x5373;&#x6B63;&#x5E38;&#x7684;Spring Boot&#x542F;&#x52A8;&#x5E8F;&#x5217;&#xFF0C;&#x65E0;&#x8BBA;&#x5B83;&#x4F5C;&#x4E3A;&#x72EC;&#x7ACB;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x8FD8;&#x662F;&#x90E8;&#x7F72;&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#xFF09;&#x7ED3;&#x675F;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x4ECE;spring.factories&#x4E2D;&#x627E;&#x5230;&#x7684;&#x7C7B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5F15;&#x5BFC;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x542F;&#x52A8;&#x4E4B;&#x524D;&#x5C06;&#x6240;&#x6709;ApplicationContextInitializer&#x7C7B;&#x578B;&#x7684;@Bean&#x6DFB;&#x52A0;&#x5230;&#x4E3B;SpringApplication&#x3002;</p>
 <hr>
-<h1 id="spring-cloud-context-application-context-services">Spring Cloud Context: Application Context Services</h1>
-<p>Spring Boot has an opinionated view of how to build an application with Spring: for instance it has conventional locations for common configuration file, and endpoints for common management and monitoring tasks. Spring Cloud builds on top of that and adds a few features that probably all components in a system would use or occasionally need.</p>
+<h1 id="customizing-the-bootstrap-configuration">Customizing the Bootstrap Configuration</h1>
+<p>The bootstrap context can be trained to do anything you like by adding entries to /META-INF/spring.factories under the key org.springframework.cloud.bootstrap.BootstrapConfiguration. This is a comma-separated list of Spring @Configuration classes which will be used to create the context. Any beans that you want to be available to the main application context for autowiring can be created here, and also there is a special contract for @Beans of type ApplicationContextInitializer. Classes can be marked with an @Order if you want to control the startup sequence (the default order is &quot;last&quot;).</p>
+<p>WARNING
+Be careful when adding custom BootstrapConfiguration that the classes you add are not @ComponentScanned by mistake into your &quot;main&quot; application context, where they might not be needed. Use a separate package name for boot configuration classes that is not already covered by your @ComponentScan or @SpringBootApplication annotated configuration classes.
+The bootstrap process ends by injecting initializers into the main SpringApplication instance (i.e. the normal Spring Boot startup sequence, whether it is running as a standalone app or deployed in an application server). First a bootstrap context is created from the classes found in spring.factories and then all @Beans of type ApplicationContextInitializer are added to the main SpringApplication before it is started.</p>
 
                                 
                                 </section>
@@ -373,12 +380,12 @@
 
             
                 
-                <a href="../Cloud Native Applications.html" class="navigation navigation-prev " aria-label="Previous page: 原生云应用">
+                <a href="Overriding the Values of Remote Properties.html" class="navigation navigation-prev " aria-label="Previous page: 覆盖远程属性的值">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="The Bootstrap Application Context.html" class="navigation navigation-next " aria-label="Next page: 应用程序引导上下文">
+                <a href="Customizing the Bootstrap Property Sources.html" class="navigation navigation-next " aria-label="Next page: 自定义引导属性源">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -389,7 +396,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Spring Cloud 上下文","level":"1.4.1","depth":2,"next":{"title":"应用程序引导上下文","level":"1.4.1.1","depth":3,"path":"Cloud Native Applications/Spring Cloud Context/The Bootstrap Application Context.md","ref":"Cloud Native Applications/Spring Cloud Context/The Bootstrap Application Context.md","articles":[]},"previous":{"title":"原生云应用","level":"1.4","depth":1,"path":"Cloud Native Applications/Cloud Native Applications.md","ref":"Cloud Native Applications/Cloud Native Applications.md","articles":[{"title":"Spring Cloud 上下文","level":"1.4.1","depth":2,"path":"Cloud Native Applications/Spring Cloud Context/Spring Cloud Context.md","ref":"Cloud Native Applications/Spring Cloud Context/Spring Cloud Context.md","articles":[{"title":"应用程序引导上下文","level":"1.4.1.1","depth":3,"path":"Cloud Native Applications/Spring Cloud Context/The Bootstrap Application Context.md","ref":"Cloud Native Applications/Spring Cloud Context/The Bootstrap Application Context.md","articles":[]},{"title":"应用上下文层次结构","level":"1.4.1.2","depth":3,"path":"Cloud Native Applications/Spring Cloud Context/Application Context Hierarchies.md","ref":"Cloud Native Applications/Spring Cloud Context/Application Context Hierarchies.md","articles":[]},{"title":"更改引导属性的位置","level":"1.4.1.3","depth":3,"path":"Cloud Native Applications/Spring Cloud Context/Changing the Location of Bootstrap Properties.md","ref":"Cloud Native Applications/Spring Cloud Context/Changing the Location of Bootstrap Properties.md","articles":[]},{"title":"覆盖远程属性的值","level":"1.4.1.4","depth":3,"path":"Cloud Native Applications/Spring Cloud Context/Overriding the Values of Remote Properties.md","ref":"Cloud Native Applications/Spring Cloud Context/Overriding the Values of Remote Properties.md","articles":[]},{"title":"自定义引导配置","level":"1.4.1.5","depth":3,"path":"Cloud Native Applications/Spring Cloud Context/Customizing the Bootstrap Configuration.md","ref":"Cloud Native Applications/Spring Cloud Context/Customizing the Bootstrap Configuration.md","articles":[]},{"title":"自定义引导属性源","level":"1.4.1.6","depth":3,"path":"Cloud Native Applications/Spring Cloud Context/Customizing the Bootstrap Property Sources.md","ref":"Cloud Native Applications/Spring Cloud Context/Customizing the Bootstrap Property Sources.md","articles":[]},{"title":"环境更改","level":"1.4.1.7","depth":3,"path":"Cloud Native Applications/Spring Cloud Context/Environment Changes.md","ref":"Cloud Native Applications/Spring Cloud Context/Environment Changes.md","articles":[]},{"title":"刷新作用域","level":"1.4.1.8","depth":3,"path":"Cloud Native Applications/Spring Cloud Context/Refresh Scope.md","ref":"Cloud Native Applications/Spring Cloud Context/Refresh Scope.md","articles":[]},{"title":"加密和解密","level":"1.4.1.9","depth":3,"path":"Cloud Native Applications/Spring Cloud Context/Encryption and Decryption.md","ref":"Cloud Native Applications/Spring Cloud Context/Encryption and Decryption.md","articles":[]},{"title":"端点","level":"1.4.1.10","depth":3,"path":"Cloud Native Applications/Spring Cloud Context/Endpoints.md","ref":"Cloud Native Applications/Spring Cloud Context/Endpoints.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Cloud Native Applications/Spring Cloud Context/Spring Cloud Context.md","mtime":"2017-02-20T01:37:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-21T02:00:12.283Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"自定义引导配置","level":"1.4.1.5","depth":3,"next":{"title":"自定义引导属性源","level":"1.4.1.6","depth":3,"path":"Cloud Native Applications/Spring Cloud Context/Customizing the Bootstrap Property Sources.md","ref":"Cloud Native Applications/Spring Cloud Context/Customizing the Bootstrap Property Sources.md","articles":[]},"previous":{"title":"覆盖远程属性的值","level":"1.4.1.4","depth":3,"path":"Cloud Native Applications/Spring Cloud Context/Overriding the Values of Remote Properties.md","ref":"Cloud Native Applications/Spring Cloud Context/Overriding the Values of Remote Properties.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Cloud Native Applications/Spring Cloud Context/Customizing the Bootstrap Configuration.md","mtime":"2017-02-21T03:08:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-21T02:00:12.283Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
