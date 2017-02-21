@@ -15,3 +15,7 @@
 		* [刷新作用域](Cloud Native Applications/Spring Cloud Context/Refresh Scope.md)
 		* [加密和解密](Cloud Native Applications/Spring Cloud Context/Encryption and Decryption.md)
 		* [端点](Cloud Native Applications/Spring Cloud Context/Endpoints.md)
+	* [Spring Cloud Commons: 公共抽象](Cloud Native Applications/Spring Cloud Commons/Spring Cloud Commons- Common Abstractions.md)
+		* [Spring RestTemplate作为负载均衡客户端](Cloud Native Applications/Spring Cloud Commons/Spring RestTemplate as a Load Balancer Client.md)
+		* [多个RestTemplate对象](Cloud Native Applications/Spring Cloud Commons/Multiple RestTemplate objects.md)
+		* [忽略网络接口](Cloud Native Applications/Spring Cloud Commons/Ignore Network Interfaces.md)
