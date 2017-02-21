@@ -6,3 +6,4 @@
 * [原生云应用](Cloud Native Applications/Cloud Native Applications.md)
 	* [Spring Cloud 上下文](Cloud Native Applications/Spring Cloud Context/Spring Cloud Context.md)
 		* [应用程序引导上下文](Cloud Native Applications/Spring Cloud Context/The Bootstrap Application Context.md)
+		* [应用上下文层次结构](Cloud Native Applications/Spring Cloud Context/Application Context Hierarchies.md)

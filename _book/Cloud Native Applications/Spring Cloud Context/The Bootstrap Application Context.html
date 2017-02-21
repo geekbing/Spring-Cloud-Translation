@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="Application Context Hierarchies.html" />
+    
     
     <link rel="prev" href="Spring Cloud Context.html" />
     
@@ -167,6 +169,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.4.1.2" data-path="Application Context Hierarchies.html">
+            
+                <a href="Application Context Hierarchies.html">
+            
+                    
+                    应用上下文层次结构
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -234,6 +249,7 @@ spring:
       uri: ${SPRING_CONFIG_URI:http://localhost:8888}
 </code></pre><p>&#x5982;&#x679C;&#x60A8;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x9700;&#x8981;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x7279;&#x5B9A;&#x4E8E;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x5219;&#x6700;&#x597D;&#x8BBE;&#x7F6E; <code>spring.application.name</code>&#xFF08;&#x5728;bootstrap.yml&#x6216;application.yml&#x4E2D;&#xFF09;&#x3002;</p>
 <p>&#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E; <code>spring.cloud.bootstrap.enabled = false</code>&#xFF08;&#x4F8B;&#x5982;&#x5728;&#x7CFB;&#x7EDF;&#x5C5E;&#x6027;&#x4E2D;&#xFF09;&#x5B8C;&#x5168;&#x7981;&#x7528;&#x5F15;&#x5BFC;&#x8FC7;&#x7A0B;&#x3002;</p>
+<hr>
 <h1 id="the-bootstrap-application-context">The Bootstrap Application Context</h1>
 <p>A Spring Cloud application operates by creating a &quot;bootstrap&quot; context, which is a parent context for the main application. Out of the box it is responsible for loading configuration properties from the external sources, and also decrypting properties in the local external configuration files. The two contexts share an Environment which is the source of external properties for any Spring application. Bootstrap properties are added with high precedence, so they cannot be overridden by local configuration, by default.</p>
 <p>The bootstrap context uses a different convention for locating external configuration than the main application context, so instead of application.yml (or .properties) you use bootstrap.yml, keeping the external configuration for bootstrap and main context nicely separate. Example:</p>
@@ -273,10 +289,14 @@ spring:
 
             
                 
-                <a href="Spring Cloud Context.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Spring Cloud 上下文">
+                <a href="Spring Cloud Context.html" class="navigation navigation-prev " aria-label="Previous page: Spring Cloud 上下文">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="Application Context Hierarchies.html" class="navigation navigation-next " aria-label="Next page: 应用上下文层次结构">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -285,7 +305,7 @@ spring:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"应用程序引导上下文","level":"1.4.1.1","depth":3,"previous":{"title":"Spring Cloud 上下文","level":"1.4.1","depth":2,"path":"Cloud Native Applications/Spring Cloud Context/Spring Cloud Context.md","ref":"Cloud Native Applications/Spring Cloud Context/Spring Cloud Context.md","articles":[{"title":"应用程序引导上下文","level":"1.4.1.1","depth":3,"path":"Cloud Native Applications/Spring Cloud Context/The Bootstrap Application Context.md","ref":"Cloud Native Applications/Spring Cloud Context/The Bootstrap Application Context.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Cloud Native Applications/Spring Cloud Context/The Bootstrap Application Context.md","mtime":"2017-02-19T14:22:44.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-19T14:22:57.338Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"应用程序引导上下文","level":"1.4.1.1","depth":3,"next":{"title":"应用上下文层次结构","level":"1.4.1.2","depth":3,"path":"Cloud Native Applications/Spring Cloud Context/Application Context Hierarchies.md","ref":"Cloud Native Applications/Spring Cloud Context/Application Context Hierarchies.md","articles":[]},"previous":{"title":"Spring Cloud 上下文","level":"1.4.1","depth":2,"path":"Cloud Native Applications/Spring Cloud Context/Spring Cloud Context.md","ref":"Cloud Native Applications/Spring Cloud Context/Spring Cloud Context.md","articles":[{"title":"应用程序引导上下文","level":"1.4.1.1","depth":3,"path":"Cloud Native Applications/Spring Cloud Context/The Bootstrap Application Context.md","ref":"Cloud Native Applications/Spring Cloud Context/The Bootstrap Application Context.md","articles":[]},{"title":"应用上下文层次结构","level":"1.4.1.2","depth":3,"path":"Cloud Native Applications/Spring Cloud Context/Application Context Hierarchies.md","ref":"Cloud Native Applications/Spring Cloud Context/Application Context Hierarchies.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Cloud Native Applications/Spring Cloud Context/The Bootstrap Application Context.md","mtime":"2017-02-20T01:37:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-21T02:00:12.283Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -293,6 +313,10 @@ spring:
         
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>

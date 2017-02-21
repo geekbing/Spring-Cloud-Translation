@@ -14,7 +14,7 @@ Spring Cloud依赖于Spring Boot来构建，它的许多功能都被Spring Boot�
 
 注意: Spring Cloud是根据非限制性Apache 2.0许可证发布的。 如果你想贡献这一部分的文档，或者如果你发现了错误，请在github的项目中找到源代码和问题跟踪。
 
-
+---
 
 # Cloud Native Applications
 

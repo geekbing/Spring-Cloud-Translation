@@ -4,7 +4,7 @@ Spring Cloud 为开发者提供了大量的工具\(例如：配置管理、服�
 
 版本: Brixton.SR7 \(PS: 英国地名布里克斯顿，SR是指电脑软件修正版或更新版\)
 
-
+---
 
 # Spring Cloud
 

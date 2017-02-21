@@ -18,6 +18,8 @@ spring:
 
 您可以通过设置 `spring.cloud.bootstrap.enabled = false`（例如在系统属性中）完全禁用引导过程。
 
+---
+
 # The Bootstrap Application Context
 
 A Spring Cloud application operates by creating a "bootstrap" context, which is a parent context for the main application. Out of the box it is responsible for loading configuration properties from the external sources, and also decrypting properties in the local external configuration files. The two contexts share an Environment which is the source of external properties for any Spring application. Bootstrap properties are added with high precedence, so they cannot be overridden by local configuration, by default.
